@@ -17,18 +17,18 @@ export class HeaderComponent extends AppComponent implements OnInit {
     super();
   }
 
-  public responseTopicos: JSON;
+  public responseTopicos;
 
   ngOnInit() {
     this.getAllTopics();
-    console.log(this.responseTopicos);
+
   }
 
   getAllTopics() {
     return this.serviceHeaderService
       .getTopicos()
       .subscribe((data: any) =>
-        this.responseTopicos = data,
+        this.responseTopicos = data.content,
         error => console.log("Erro na consulta", error),
         () => { }
       );
