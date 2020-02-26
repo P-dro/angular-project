@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "testebuild": "ng buil my-lib && cd dist/my-lib && npm publish --registry https://github.com/P-dro/testLib.git"
   },
   "private": true,
   "dependencies": {
