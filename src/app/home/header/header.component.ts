@@ -20,13 +20,13 @@ export class HeaderComponent extends AppComponent implements OnInit {
   public responseTopicos;
 
   ngOnInit() {
-    this.getAllTopics();
+    this.getAllGames();
 
   }
 
-  getAllTopics() {
+  getAllGames() {
     return this.serviceHeaderService
-      .getTopicos()
+      .getGames()
       .subscribe((data: any) =>
         this.responseTopicos = data.content,
         error => console.log("Erro na consulta", error),

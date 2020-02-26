@@ -1,0 +1,18 @@
+<div class="container">
+    <h1>Cadastro do Jogo</h1>
+    <div class="form-group">
+        <!-- Nome do Jogo Valor do Jogo -->
+        <form [formGroup]="dadosCadastroForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label>Nome do Jogo</label>
+                <input formControlName="jogoNome" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Valor do Jogo</label>
+                <input required formControlName="jogoValor" type="number" class="form-control">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>

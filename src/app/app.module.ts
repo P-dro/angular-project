@@ -6,6 +6,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './home/header/header.component';
+import { CadastroGameComponent } from './cadastro-game/cadastro-game.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 
 
@@ -13,13 +16,16 @@ import { HeaderComponent } from './home/header/header.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    CadastroGameComponent
   ],
   imports: [
     AlertModule.forRoot(),
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
+
   ],
   providers: [HttpClient],
   bootstrap: [AppComponent]

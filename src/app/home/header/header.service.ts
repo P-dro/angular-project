@@ -14,14 +14,8 @@ export class HeaderService extends ProjectService {
     super(http);
   }
 
-  public getTopicos() {
-
-
-    return super.getAll<any>(UrlConstantes.GET_TOPICOS)
-    /* return this.http.get(UrlConstantes.GET_TOPICOS).subscribe(response => {
-    }, err => {
-      console.log('Erro ao executar getTopicos: ' + err);
-    }); */
+  public getGames() {
+    return super.getAll<any>(UrlConstantes.GET_JOGOS);
   }
 
 }
